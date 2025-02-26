@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome!</title>
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     body {
  background: black;
     color: #00ffcc;
@@ -16,6 +17,10 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
 }
 
 .con{
@@ -84,6 +89,12 @@ a:hover{
       }, {once: true})
     });
   });
+  
+  window.onload = function() {
+    setTimeout(() => {
+        alert("Tap anywhere on the screen to play the music!");
+    }, 1000);
+};
 </script>
 </body>
 
