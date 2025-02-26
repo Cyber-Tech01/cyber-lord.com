@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome!</title>
+  <style>
+    body {
+ background: black;
+    color: #00ffcc;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.con{
+  position: relative;
+}
+
+.con h1 {
+  position: relative;
+  text-transform: uppercase;
+  animation: glitch;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0px #ff00ff,-2px -2px 0px #00ffcc;
+  }
+  50% {
+        text-shadow: -2px -2px 0px #ff00ff,2px 2px 0px #00ffcc;
+
+  }
+  100%{
+        text-shadow: 2px -2px 0px #ff00ff,2px -2px 0px #00ffcc;
+
+  }
+}
+
+
+
+a{
+  background:blue;
+  color:white;
+  text-decoration: none;
+  padding:12px 24px;
+  border-radius:5px;
+  font-size: 1.2em;
+  
+}
+a:hover{
+  color:black;
+  background:#ff00ff;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="con">
+    <h1>Welcome To Cyber Lord Official Website</h1>
+    <a href="/portfolio.html">Ok</a>
+  </div>
+  <audio id="bg-audio" src="/dead.mp3" loop></audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("bg-audio");
+
+      audio.volume = 1.0;
+
+    audio.play().catch(error  => {
+      console.log("Error found,trying workaround");
+      
+      document.addEventListener('click', () => {
+        audio.play();
+      }, {once: true})
+    });
+  });
+</script>
+</body>
+
+</html>
